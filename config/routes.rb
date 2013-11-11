@@ -3,6 +3,8 @@ Hwapp1::Application.routes.draw do
   resources :users
   get "landing_pages/home"
   root :to => 'landing_pages#home'
+
+  match "/auth/twitter/callback" => "sessions#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
