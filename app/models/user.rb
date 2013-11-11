@@ -6,4 +6,16 @@ class User < ActiveRecord::Base
   validates :email, format: {with: emailFormatValidation}
   validates :email, uniqueness: true
   validates :password, confirmation: true
+
+  def self.create_with_omniauth(auth)
+  	create! do |user|
+
+  		user.provider = auth["provider"]
+  		user.uid = auth["uid"]
+  		user.name = auth["info"]["name"]
+  		user.email = "#{auth["info"]["nickname"]}@twitter.com"
+  		user.password = "noPassReq'd"
+
+  	end
+  end
 end

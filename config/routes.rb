@@ -4,7 +4,8 @@ Hwapp1::Application.routes.draw do
   get "landing_pages/home"
   root :to => 'landing_pages#home'
 
-  match "/auth/twitter/callback" => "sessions#create"
+  get "/auth/twitter/callback" => "sessions#create"
+  get "/signout" => "sessions#destroy", :as => :signout
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
