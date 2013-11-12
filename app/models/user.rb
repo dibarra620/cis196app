@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
   validates :email, format: {with: emailFormatValidation}
   validates :password, confirmation: true
   scope :sortname, -> {order(:name)}
-  scope :sortemail, -> {order(:email)}
 
   def self.create_with_omniauth(auth)
   	create! do |user|

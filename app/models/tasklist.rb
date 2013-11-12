@@ -3,5 +3,4 @@ class Tasklist < ActiveRecord::Base
   attr_accessible :title, :user_id
 
   scope :ordertitle, -> {order(:title)}
-  scope :orderuser, -> {order(:user)}
 end
