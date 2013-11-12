@@ -2,5 +2,5 @@ class Tasklist < ActiveRecord::Base
   belongs_to :user
   attr_accessible :title, :user_id
 
-  scope :ordertitle, -> {order(:title)}
+  scope :sort_by_title, -> {order(:title)}
 end

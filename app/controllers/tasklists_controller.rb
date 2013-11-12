@@ -1,7 +1,7 @@
 class TasklistsController < ApplicationController
   
   def index
-    @task_lists = Tasklist.ordertitle
+    @task_lists = Tasklist.sort_by_title
   end
 
   def new

@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   emailFormatValidation = /[a-z.-]+@[a-z \d -.]+[.][a-z]+/i
   validates :email, format: {with: emailFormatValidation}
   validates :password, confirmation: true
-  scope :sortname, -> {order(:name)}
+  scope :sort_by_name, -> {order(:name)}
 
   def self.create_with_omniauth(auth)
   	create! do |user|

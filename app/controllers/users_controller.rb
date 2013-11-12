@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  	@user = User.sortname
+  	@user = User.sort_by_name
   end
 
   def create
