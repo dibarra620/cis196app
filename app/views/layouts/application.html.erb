@@ -4,8 +4,8 @@
   <title>Hwapp1</title>
   <link rel = "stylesheet" type = "text/css" ref="../assets/bootstrap.min.css">
   <script src = "../assets/bootstrap.min.js"></script>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -47,6 +47,10 @@
 </div>
 
 <%= yield %>
+
+<script>
+  $('.dropdown-toggle').dropdown();
+</script>
 
 </body>
 </html>
