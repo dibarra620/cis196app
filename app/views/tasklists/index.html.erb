@@ -1,3 +1,5 @@
+<h1 id="title" onclick="this.style.backgroundColor='lightblue';this.style.color='white'">Lists</h1>
+
 <table>
 	<tr>
 		<td>title</td>
@@ -6,7 +8,7 @@
 
 <% @task_lists.each do |task_list| %>
 	<tr>
-		<td><%= task_list.title %></td>
+		<td onMouseOver="this.style.backgroundColor='lightblue';this.style.color='white' " onMouseOut="this.style.backgroundColor='white';this.style.color = 'black'"><%= task_list.title %></td>
 		<td><%= (task_list.user).name %></td>
 		<td><%= link_to "show tasklist", tasklist_path(task_list.id) %></td>
 		<td><%= link_to "edit tasklist", edit_tasklist_path(task_list.id) %></td>
