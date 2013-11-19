@@ -1,3 +1,11 @@
-No problems on this one :) Had a lot of other stuff for other classes so I only did the verifications. Will make it pretty soon though!!
+'Users' and 'Tasklists' titles highlight when mouse hovers over on landing page
 
-Verifications for new users
+Titles highlight when clicked on user/tasklist index pages
+
+user names/task names highlight when hovered over on index pages
+
+User highlights on click in show-user page
+
+user's tasks highlighted when hovered over in show-user page
+
+*used inline javascript since i ran into troubles with the methods described in class
