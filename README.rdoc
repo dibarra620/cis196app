@@ -1,11 +1,31 @@
-'Users' and 'Tasklists' titles highlight when mouse hovers over on landing page
+Description:
+	This app provides a way for a group of people (organization, club, co-workers, etc.), who are all working to complete the same list of tasks, to work concurrently without wasting resources (i.e. having two people unknowingly work on the same task). Each member of the organization creates a login and becomes a user. Each user can then see the other users and their email accounts so they can always be in contact. Additionally, each user can submit which tasks they are working on and a master list of tasks and who each task belongs to is viewable by everyone. This way (assuming tasks can be completed by anyone), there is no need for any extra coordination between groups to settle which task belongs to who, members simply assign themselves tasks and everyone else can immediately see that they no longer have to work on that task and can begin work on new tasks.
 
-Titles highlight when clicked on user/tasklist index pages
+CSS/Javascript:
+	Bootstrap stylesheet used throughout, incorporated navbar.
+	Javascript functions to highlight Labels and different users and tasks in their respective indexes. 
 
-user names/task names highlight when hovered over on index pages
+Gem:
+	Omniauth for twitter authentication. Users can login/sign up through twitter instead of the app's regular login. Their usernames become their twitter names, and their emails become their twitter email.
+	Documentation: https://github.com/intridea/omniauth/wiki
 
-User highlights on click in show-user page
+Heroku Addon:
+	NewRelic for performance monitoring. Screenshot of newrelic dashboard added to repository under app/assets/images
+	Documentation: https://docs.newrelic.com/docs
 
-user's tasks highlighted when hovered over in show-user page
+Resources:
+	Users, Tasklists (Tasklists belong_to Users). Ability to CRUD both users and tasklists
 
-*used inline javascript since i ran into troubles with the methods described in class
+Validations:
+	Validates presence of name, password length, password format, and password confirmation upon sign up
+
+Scope:
+	Scope in User sorts users by name in user index, scope also used in 'show user' to sort each user's tasks by name
+	Scope used in Tasklist to sort tasks by title
+
+Heroku Site:
+	http://dibarrahwapp.herokuapp.com/
+
+*** Additional Notes ***
+
+At the beginning of the year I really though I would put a lot of work into my app and make something really cool, but then school started I realized I wouldn't have nearly as much time as I thought I would. I wasn't able to add much to this app besides what was required for the homeworks and I apologize for that. However, I really did learn a lot and am confident that if I were to have enough time to devote to it (perhaps in the summer), I have the tools necessary to make a pretty decent app all on my own. Thank you!
